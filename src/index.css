@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --persian-rose-50:  #fef1f9;
+  --persian-rose-100: #fee5f4;
+  --persian-rose-200: #ffcaec;
+  --persian-rose-300: #ff9fda;
+  --persian-rose-400: #ff64c0;
+  --persian-rose-500: #fe36a4;
+  --persian-rose-600: #ef1381;
+  --persian-rose-700: #d00665;
+  --persian-rose-800: #ac0853;
+  --persian-rose-900: #8f0c48;
+  --persian-rose-950: #580027;
+
+ /* Yellow Colors - Paleta Quente para Footer */
+  --yellow-200: #fef08a;  /* Amarelo claro suave */
+  --yellow-400: #facc15;  /* Amarelo vibrante */
+  --yellow-600: #ca8a04;  /* Amarelo dourado escuro */
+  
+  /* Cor do texto do footer (opcional) */
+  --footer-font: #ffffff; /* Branco para contrastar com amarelo */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Garantir que o footer fique no final */
+footer {
+  margin-top: auto;
+}
