@@ -73,4 +73,6 @@ function Navbar() {
   <Link to='' onClick={logout} className="hover:underline">Sair</Link>
 }
 
+
+
 export default Navbar;

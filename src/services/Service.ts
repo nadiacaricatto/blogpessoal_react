@@ -16,7 +16,7 @@ export const login = async (url: string, dados: Object, setDados: Function) => {
 }
 
 //Função para Consultar com Token 
-export const buscar = async (url: string, setDados: Function, header: Object) => { //Aqui não teremos dados, porque estamos recebendo dados - SetDados continua para atualizar 
+export const buscar = async (url: string, setDados: Function, header: Object) => { 
     const resposta = await api.get(url, header);
     setDados(resposta.data);
 }

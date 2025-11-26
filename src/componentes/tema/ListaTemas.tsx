@@ -7,13 +7,9 @@ import { AuthContext } from "../../contexts/AuthContext";
 import { buscar } from "../../services/Service";
 
 function ListaTemas() {
-
     const navigate = useNavigate();
-
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    
     const [temas, setTemas] = useState<Tema[]>([]);
-
     const { usuario, handleLogout } = useContext(AuthContext);
     const token = usuario.token;
 
@@ -30,13 +26,10 @@ function ListaTemas() {
 
     async function buscarTemas(){
         try{
-
             setIsLoading(true);
-
             await buscar('/temas', setTemas, {
                 headers: { Authorization: token }
             })
-
         }catch(error: any){
             if(error.toString().includes('401')){
                 handleLogout();
@@ -48,40 +41,32 @@ function ListaTemas() {
 
     return (
         <>
-            {
-                isLoading && (
-                    <div className="flex justify-center w-full my-8">
-                        <SyncLoader
-                            color="#312e81"
-                            size={32}
-                        />
-                    </div>
-                )
-            }
-
+            {isLoading && (
+                <div className="flex justify-center w-full my-8">
+                    <SyncLoader
+                        color="var(--yellow-600)"
+                        size={32}
+                    />
+                </div>
+            )}
+            
             <div className="flex justify-center w-full px-4 my-4">
                 <div className="container flex flex-col">
-
-                    {
-                       (!isLoading && temas.length === 0) &&(
-                            <span className="text-3xl text-center my-8">
-                                Nenhum Tema foi encontrado!
-                            </span>
-                       )
-                    }
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 
-                                    lg:grid-cols-3 gap-8">
-                            {
-                                temas.map((tema) => (
-                                    <CardTema key={tema.id} tema={tema}/>
-                                ) )
-                            }
-                            
+                    {(!isLoading && temas.length === 0) && (
+                        <span className="text-3xl text-center my-8 text-(--persian-rose-700) font-bold">
+                            🎨 Nenhum Tema foi encontrado!
+                        </span>
+                    )}
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {temas.map((tema) => (
+                            <CardTema key={tema.id} tema={tema}/>
+                        ))}
                     </div>
                 </div>
             </div>
         </>
     )
 }
+
 export default ListaTemas;
