@@ -63,7 +63,7 @@ function DeletarTema() {
     return (
         <div className='container w-full max-w-2xl mx-auto py-8 px-4'>
             <h1 className='text-4xl font-extrabold text-transparent bg-clip-text 
-                          bg-linear-to-r from-(--persian-rose-600) 
+                          bg-gradient-to-r from-(--persian-rose-600) 
                           to-(--persian-rose-800) text-center mb-4'>
                 🗑️ Deletar Tema
             </h1>
@@ -75,20 +75,20 @@ function DeletarTema() {
             <div className='border-2 border-(--persian-rose-400) flex flex-col 
                           rounded-2xl overflow-hidden justify-between shadow-xl bg-white'>
                 <header 
-                    className='py-3 px-6 bg-linear-to-r from-(--persian-rose-500) 
+                    className='py-3 px-6 bg-gradient-to-r from-(--persian-rose-500) 
                              to-(--persian-rose-600) text-white font-bold text-xl'>
                     🎨 Tema
                 </header>
                 
                 <p className='p-8 text-3xl font-bold text-(--persian-rose-800) 
-                            bg-linear-to-br from-(--persian-rose-50) 
+                            bg-gradient-to-br from-(--persian-rose-50) 
                             to-white h-full text-center flex items-center justify-center'>
                     {tema.descricao}
                 </p>
 
                 <div className="flex">
                     <button 
-                        className='text-white bg-linear-to-r from-gray-400 to-gray-500 
+                        className='text-white bg-gradient-to-r from-gray-400 to-gray-500 
                                  hover:from-gray-500 hover:to-gray-600 w-full py-3 
                                  font-semibold transition-all duration-300'
                         onClick={retornar}    
@@ -96,7 +96,7 @@ function DeletarTema() {
                         ❌ Não
                     </button>
                     <button 
-                        className='w-full text-white bg-linear-to-r 
+                        className='w-full text-white bg-gradient-to-r 
                                  from-(--persian-rose-500) to-(--persian-rose-600) 
                                  hover:from-(--persian-rose-600) 
                                  hover:to-(--persian-rose-700) flex items-center 

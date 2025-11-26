@@ -88,7 +88,7 @@ function FormTema() {
     return (
         <div className="container flex flex-col items-center justify-center mx-auto py-8 px-4">
             <h1 className="text-4xl font-extrabold text-transparent bg-clip-text 
-                          bg-linear-to-r from-(--yellow-600) 
+                          bg-gradient-to-r from-(--yellow-600) 
                           to-(--persian-rose-600) text-center mb-8">
                 {id === undefined ? "🎨 Criar Novo Tema" : "✏️ Atualizar Tema"}
             </h1>
@@ -114,7 +114,7 @@ function FormTema() {
                 </div>
 
                 <button
-                    className="rounded-xl text-white bg-linear-to-r 
+                    className="rounded-xl text-white bg-gradient-to-r 
                              from-(--yellow-400) to-(--yellow-600) 
                              hover:from-(--yellow-600) hover:to-(--yellow-400) 
                              w-full py-3 font-bold flex justify-center

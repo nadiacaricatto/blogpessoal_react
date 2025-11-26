@@ -6,7 +6,7 @@ function ModalPostagem() {
         <>
             <Popup 
                 trigger={
-                    <button className='bg-linear-to-r from-(--persian-rose-500) 
+                    <button className='bg-gradient-to-r from-(--persian-rose-500) 
                                      to-(--persian-rose-600) hover:from-(--persian-rose-600) 
                                      hover:to-(--persian-rose-700) text-white font-bold
                                      border-2 border-white rounded-xl px-6 py-3 

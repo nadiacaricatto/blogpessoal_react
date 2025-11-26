@@ -61,7 +61,7 @@ function AtualizarPerfil() {
         handleLogout()
     }
 
-    function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
+    function atualizarEstado(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         setUser({
             ...user,
             [e.target.name]: e.target.value,
@@ -102,14 +102,14 @@ function AtualizarPerfil() {
     }
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-(--persian-rose-50) 
+        <div className="min-h-screen bg-gradient-to-br from-(--persian-rose-50) 
                        to-(--yellow-100) py-12 px-4">
             <div className="container mx-auto max-w-7xl">
                 <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
                     <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr]">
                         
                         {/* Seção da foto */}
-                        <div className="bg-linear-to-br from-(--persian-rose-400) 
+                        <div className="bg-gradient-to-br from-(--persian-rose-400) 
                                       via-(--persian-rose-500) to-(--yellow-500) 
                                       p-8 flex flex-col items-center justify-center">
                             <div className="relative">
@@ -132,7 +132,7 @@ function AtualizarPerfil() {
                         <div className="p-8 lg:p-12">
                             <div className="mb-8">
                                 <h1 className="text-4xl font-bold text-transparent bg-clip-text 
-                                             bg-linear-to-r from-(--persian-rose-700) 
+                                             bg-gradient-to-r from-(--persian-rose-700) 
                                              to-(--yellow-700) mb-2">
                                     ✏️ Editar Perfil
                                 </h1>
@@ -202,6 +202,28 @@ function AtualizarPerfil() {
                                 </div>
 
                                 <div className="space-y-2">
+                                    <label htmlFor="bio" 
+                                          className="block text-sm font-bold text-(--persian-rose-800)">
+                                        ✨ Bio / Frase Pessoal
+                                    </label>
+                                    <textarea
+                                        id="bio"
+                                        name="bio"
+                                        placeholder="Escreva algo sobre você... ou deixe em branco para uma frase zoeira 😉"
+                                        rows={3}
+                                        className="w-full px-4 py-3 border-2 border-(--persian-rose-300) 
+                                                 rounded-xl focus:border-(--persian-rose-500) 
+                                                 focus:outline-none transition-colors resize-none"
+                                        value={user.bio || ""}
+                                        onChange={(e: ChangeEvent<HTMLTextAreaElement>) => atualizarEstado(e)}
+                                        maxLength={200}
+                                    />
+                                    <p className="text-xs text-gray-500 text-right">
+                                        {user.bio?.length || 0}/200 caracteres
+                                    </p>
+                                </div>
+
+                                <div className="space-y-2">
                                     <label htmlFor="senha" 
                                           className="block text-sm font-bold text-(--persian-rose-800)">
                                         🔒 Nova Senha
@@ -253,7 +275,7 @@ function AtualizarPerfil() {
                                     </button>
                                     <button
                                         type="submit"
-                                        className="flex-1 px-6 py-3 bg-linear-to-r 
+                                        className="flex-1 px-6 py-3 bg-gradient-to-r 
                                                  from-(--persian-rose-500) 
                                                  to-(--persian-rose-600) 
                                                  hover:from-(--persian-rose-600) 

@@ -13,7 +13,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             hover:scale-[1.02] bg-white'>
                 
             <div>
-                <div className="flex w-full bg-linear-to-r from-(--persian-rose-400) 
+                <div className="flex w-full bg-gradient-to-r from-(--persian-rose-400) 
                                to-(--persian-rose-500)] py-3 px-4 items-center gap-4">
                     <img
                         src={postagem.usuario?.foto}
@@ -49,14 +49,14 @@ function CardPostagem({ postagem }: CardPostagensProps) {
             
             <div className="flex">
                 <Link to={`/editarpostagem/${postagem.id}`} 
-                    className='w-full text-white bg-linear-to-r from-(--yellow-400) 
+                    className='w-full text-white bg-gradient-to-r from-(--yellow-400) 
                     to-(--yellow-600) hover:from-(--yellow-600)
                     hover:to-(--yellow-400) flex items-center justify-center py-3
                     font-semibold transition-all duration-300'>
                     <button>✏️ Editar</button>
                 </Link>
                 <Link to={`/deletarpostagem/${postagem.id}`}
-                    className='text-white bg-linear-to-r from-(--persian-rose-500) 
+                    className='text-white bg-gradient-to-r from-(--persian-rose-500) 
                     to-(--persian-rose-600) hover:from-(--persian-rose-600) 
                     hover:to-(--persian-rose-700) w-full flex items-center 
                     justify-center font-semibold transition-all duration-300'>
