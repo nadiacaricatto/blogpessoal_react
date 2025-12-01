@@ -47,12 +47,11 @@ function Perfil() {
         }
     }, [usuario.token])
 
-    // Filtrar postagens do usuário logado
+    // Filtrar Posts Usuário Logado
     const minhasPostagens = postagens.filter(
         post => post.usuario?.id === usuario.id
     )
 
-    // Frase padrão zoeira se não tiver bio
     const bioDefault = "Este usuário é do contra e não quis colocar uma frase motivacional 🙃"
 
     return (
@@ -71,7 +70,7 @@ function Perfil() {
                         <div className="absolute inset-0 bg-gradient-to-t 
                                       from-black/30 to-transparent"></div>
                         
-                        {/* Botão Editar Perfil no canto superior direito */}
+                        {/* Botão Editar Perfil */}
                         <Link
                             to="/atualizarusuario"
                             className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm
@@ -84,7 +83,7 @@ function Perfil() {
                         </Link>
                     </div>
 
-                    {/* Foto de Perfil com Balãozinho "Membro desde" */}
+                    {}
                     <div className="relative -mt-28 flex justify-center">
                         <div className="relative">
                             <img
@@ -94,14 +93,14 @@ function Perfil() {
                                 alt={`Foto de perfil de ${usuario.nome}`}
                             />
                             
-                            {/* Balãozinho tipo "speech bubble" - bem ao lado */}
+                            {/* Balãozinho */ }
                             <div className="absolute -right-32 top-12 z-20">
                                 <div className="relative bg-gradient-to-r from-(--persian-rose-500) 
                                               to-(--yellow-500) text-white text-xs font-bold 
                                               px-4 py-2 rounded-2xl shadow-xl
                                               border-2 border-white whitespace-nowrap">
                                     💫 Membro desde 2025
-                                    {/* Triangulozinho apontando para a foto */}
+                                    {}
                                     <div className="absolute left-0 top-1/2 -translate-x-2 
                                                   -translate-y-1/2 w-0 h-0 
                                                   border-t-[8px] border-t-transparent
@@ -113,7 +112,7 @@ function Perfil() {
                         </div>
                     </div>
 
-                    {/* Informações do Usuário */}
+                    {/* Infos Usuário */}
                     <div className="text-center px-6 py-8 mt-4">
                         <h1 className="text-4xl font-extrabold text-transparent bg-clip-text 
                                      bg-gradient-to-r from-(--persian-rose-700) 
@@ -125,7 +124,7 @@ function Perfil() {
                             📧 {usuario.usuario}
                         </p>
 
-                        {/* Cards de Informação */}
+                        {/* Cards */}
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 mb-8 max-w-2xl mx-auto">
                             <div className="bg-gradient-to-br from-(--persian-rose-100) 
                                           to-(--persian-rose-200) p-6 rounded-2xl 
@@ -164,7 +163,7 @@ function Perfil() {
                             </div>
                         </div>
 
-                        {/* Bio Editável */}
+                        {/* Bio / Frase Editável */}
                         <div className="mt-8 mb-6 p-6 bg-gradient-to-r from-(--persian-rose-50) 
                                       to-(--yellow-50) rounded-2xl border-2 border-(--yellow-200)">
                             <p className="text-gray-700 text-center italic text-lg">

@@ -48,7 +48,7 @@ function AtualizarPerfil() {
     }, [])
 
     useEffect(() => {
-        if (id !== undefined) {
+        if (id && id !== "0") {
             buscarUsuarioPorId()
         }
     }, [id])

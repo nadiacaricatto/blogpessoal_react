@@ -30,7 +30,7 @@ function Login() {
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-screen">
-                {/* Formulário com fundo gradiente mais quente */}
+                {}
                 <div className="flex justify-center items-center bg-gradient-to-br from-[#ffcaec] via-[#fef08a] to-[#ff9fda] p-8">
                     <form className="flex justify-center items-center flex-col w-full max-w-md gap-6 
                                    bg-white/80 backdrop-blur-sm p-10 rounded-3xl shadow-2xl"

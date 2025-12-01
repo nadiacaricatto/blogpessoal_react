@@ -71,7 +71,7 @@ function ListaPostagens() {
                     </div>
                 )}
 
-                {/* Estado Vazio - Aesthetic */}
+                {}
                 {(!isLoading && postagens.length === 0) && (
                     <div className="flex flex-col items-center justify-center py-20">
                         <div className="bg-white rounded-3xl p-12 shadow-2xl 

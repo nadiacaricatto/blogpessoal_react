@@ -13,13 +13,13 @@
   --persian-rose-900: #8f0c48;
   --persian-rose-950: #580027;
 
- /* Yellow Colors - Paleta Quente para Footer */
-  --yellow-200: #fef08a;  /* Amarelo claro suave */
-  --yellow-400: #facc15;  /* Amarelo vibrante */
-  --yellow-600: #ca8a04;  /* Amarelo dourado escuro */
+ /* Paleta Footer */
+  --yellow-200: #fef08a; 
+  --yellow-400: #facc15;
+  --yellow-600: #ca8a04;  
   
-  /* Cor do texto do footer (opcional) */
-  --footer-font: #ffffff; /* Branco para contrastar com amarelo */
+  /* Texto do footer */
+  --footer-font: #ffffff;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
 }
 
-/* Garantir que o footer fique no final */
+/* Footer ao Final */
 footer {
   margin-top: auto;
 }
